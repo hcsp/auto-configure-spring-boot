@@ -1,10 +1,8 @@
 package com.github.hcsp.starter;
 
-import com.github.hcsp.starter.MyResponseBody;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.annotation.AnnotatedElementUtils;
 import org.springframework.web.bind.annotation.ResponseBody;

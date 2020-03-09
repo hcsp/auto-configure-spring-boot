@@ -21,4 +21,18 @@
             <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
         </repository>
     </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>5.2.2.RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>

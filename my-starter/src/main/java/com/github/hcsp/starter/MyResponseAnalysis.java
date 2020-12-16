@@ -6,8 +6,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.annotation.AnnotatedElementUtils;
-import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodReturnValueHandler;
 import org.springframework.web.method.support.ModelAndViewContainer;
@@ -27,8 +25,8 @@ public class MyResponseAnalysis implements HandlerMethodReturnValueHandler, Appl
 
     @Override
     public boolean supportsReturnType(MethodParameter returnType) {
-        return (AnnotatedElementUtils.hasAnnotation(returnType.getContainingClass(), MyResponseBody.class) ||
-                returnType.hasMethodAnnotation(MyResponseBody.class));
+        return AnnotatedElementUtils.hasAnnotation(returnType.getContainingClass(), MyResponseBody.class)
+                || returnType.hasMethodAnnotation(MyResponseBody.class);
     }
 
     @Override

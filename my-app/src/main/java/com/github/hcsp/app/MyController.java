@@ -9,8 +9,6 @@ import java.util.List;
 
 @Controller
 public class MyController {
-
-
     @GetMapping("/users")
     @MyResponseBody
     public List<User> users() {
